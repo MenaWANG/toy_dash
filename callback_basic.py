@@ -1,3 +1,4 @@
+# Type in a textbox and observe callback in action
 from dash import Dash, dcc, html, Input, Output
 
 app = Dash(__name__)
