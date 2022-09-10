@@ -1,5 +1,6 @@
 # context is a relative abstract and super helpful concept in Dash
 # let me make some more changes and only merge to main on github
+# if i make any further changes, do I still need to connect the local branch with remote branch again? or could I push directly?
 
 import json
 from dash import Dash, html, Input, Output, ctx
