@@ -1,0 +1,6 @@
+# python == 3.9.5
+# to set up with conda
+
+dash == 2.6.1
+pandas == 1.4.4
+

@@ -1,0 +1,6 @@
+# ignore all folders that begin with .
+.*/
+# ignore all files that begin with .
+.*
+# include .gitignore although it begins with . as well
+!/.gitignore
