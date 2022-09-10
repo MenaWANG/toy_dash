@@ -1,3 +1,5 @@
+# context is a relative abstract and super helpful concept in Dash
+
 import json
 from dash import Dash, html, Input, Output, ctx
 
