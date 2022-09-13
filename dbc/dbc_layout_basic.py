@@ -1,7 +1,7 @@
 from dash import Dash, html
 import dash_bootstrap_components as dbc
 
-app = Dash(external_stylesheets=[dbc.themes.FLATLY])
+app = dash.Dash(external_stylesheets=[dbc.themes.FLATLY])
 
 app.layout = dbc.Container([
     html.P("This is above the alert"),
