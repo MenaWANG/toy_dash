@@ -8,9 +8,11 @@ app.layout = html.Div([
         html.P('Click the three buttons to check out how callback context works')
     ])
     ,html.Div([
-        html.Button('Button 1', id='btn-1')
+        html.A('check out the three buttons',style = {'backgroundColor':'blue'})
+        ,html.Button('Button 1', id='btn-1')
         ,html.Button('Button 2', id='btn-2')
         ,html.Button('Button 3', id='btn-3')
+
     ])
     ,html.Div([
         html.P('Followed please see the various properties of "ctx"')

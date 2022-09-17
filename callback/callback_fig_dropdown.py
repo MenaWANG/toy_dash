@@ -10,17 +10,14 @@ app =  Dash(__name__)
 # slider should be the better choice, just playing with dropdown here
 def serve_layout():
     return html.Div([
-        # top section
+        # top section (40% width on the left) 
         html.Div([
-            # 40% width on the left? 
-            html.Div([
             dcc.Dropdown(
-            df['year'].unique(), #list
-            df['year'].min(), #default choice
-            id = 'year-dropdown'
-            )],
-            style = {'width' : '40%'})
-        ]),
+                options = df['year'].unique(), #list
+                value = df['year'].min(), #default choice
+                id = 'year-dropdown'
+                )],
+            style = {'width' : '40%'}),
         # bottom section
         dcc.Graph(id = 'graph-with-dropdown'),
     ])
