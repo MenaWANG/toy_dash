@@ -3,12 +3,12 @@ from dash import Dash, dcc, html, Input, Output
 
 app = Dash(__name__)
 
-def serve_layout():
+def serve_layout(): 
     return html.Div(children=[
     html.H6("see callback in action")
     ,html.Div([
         "Input: "
-        ,dcc.Input(
+        , dcc.Input(
             id = 'my-input'
             ,value = 'initial value'
             ,type = 'text'
