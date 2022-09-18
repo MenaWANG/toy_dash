@@ -11,11 +11,10 @@ df = pd.read_csv('https://plotly.github.io/datasets/country_indicators.csv')
 app.layout = html.Div([
     # the top secsion for user input contains two parts: left & right, each 48% wide
     html.Div([
-
-        html.Div([
+        html.Div([ #dropdown and radio button on the left
             dcc.Dropdown(
-                df['Indicator Name'].unique(),
-                'Fertility rate, total (births per woman)',
+                options = df['Indicator Name'].unique(),
+                value = 'Fertility rate, total (births per woman)',
                 id='xaxis-column'
             ),
             dcc.RadioItems(
@@ -26,7 +25,7 @@ app.layout = html.Div([
             )
         ], style={'width': '48%', 'display': 'inline-block'}),
 
-        html.Div([
+        html.Div([ #dropdown and radio button on the right
             dcc.Dropdown(
                 df['Indicator Name'].unique(),
                 'Life expectancy at birth, total (years)',
@@ -78,11 +77,13 @@ def update_graph(
 
     fig.update_layout(margin={'l': 40, 'b': 40, 't': 10, 'r': 0}, hovermode='closest')
 
-    fig.update_xaxes(title=xaxis_column_name,
-                     type='linear' if xaxis_type == 'Linear' else 'log')
+    fig.update_xaxes(
+        title=xaxis_column_name,
+        type='linear' if xaxis_type == 'Linear' else 'log')
 
-    fig.update_yaxes(title=yaxis_column_name,
-                     type='linear' if yaxis_type == 'Linear' else 'log')
+    fig.update_yaxes(
+        title=yaxis_column_name,
+        type='linear' if yaxis_type == 'Linear' else 'log')
 
     return fig
 
