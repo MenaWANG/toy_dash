@@ -8,7 +8,7 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 # in this app, the list of cities will be filtered by the list of countries
 # in order to do that, create a dictionary with countries as keys
 # If I were to use placeholder, the chained dropdown list will have KeyError
-### SOlution A: Have a default option
+### Solution A: Have a default option
 ### Solution B (a workaround if we definately don't want a default value) 
         # treat 'Please select a country' as an legitimate option 
         # Create placeholder pair in the all_options dictionary
@@ -17,7 +17,7 @@ app = Dash(__name__, external_stylesheets=external_stylesheets)
 all_options = {
     #'Please select a country':['Please select a city'], #B
     'America': ['New York City', 'San Francisco', 'Cincinnati'],
-    'Canada': [u'Montréal', 'Toronto', 'Ottawa']
+    'Canada': ['Montréal', 'Toronto', 'Ottawa']
 }
 app.layout = html.Div([
     dcc.Dropdown(

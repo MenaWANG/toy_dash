@@ -1,8 +1,0 @@
-# python == 3.9.5
-# to set up with conda, run this in anaconda prompt after creating and activating the environment
-# conda install conda-forge python=3.9.5 dash=2.6.1 dash-bootstrap-components pandas=1.4.4 
-
-dash == 2.6.1
-pandas == 1.4.4
-colorlover == 0.3.0
-

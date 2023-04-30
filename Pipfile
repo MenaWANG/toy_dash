@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dash = "2.9.3"
+pandas = "2.0.1"
+colorlover = "0.3.0"
+dash-leaflet = "0.1.23"
+dash-extensions = "0.1.13"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
