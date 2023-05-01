@@ -4,6 +4,9 @@ from dash import html
 
 app = dash.Dash(__name__)
 
+# use the value of a variable to assign different icons on the map. 
+# code based on source: https://dash-leaflet.herokuapp.com/
+
 # Set up the initial map view
 center = [-37.7749, 144.085] # San Francisco
 zoom = 10
