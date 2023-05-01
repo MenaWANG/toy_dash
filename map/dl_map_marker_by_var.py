@@ -35,10 +35,14 @@ return L.marker(latlng, {icon: flag});
 # Create the app
 app = Dash()
 app.layout = html.Div([
-    dl.Map(children=[
-        dl.TileLayer(), 
-        dl.GeoJSON(data=geojson, options=dict(pointToLayer=draw_flag), zoomToBounds=True)
-    ], style={'width': '100%', 'height': '70vh', 'margin': "auto", "display": "block"}, id="map"),
+    dl.Map( children=[
+                    dl.TileLayer(), 
+                    dl.GeoJSON(data=geojson, options=dict(pointToLayer=draw_flag), zoomToBounds=True)
+                    ], 
+            style={'width': '100%', 'height': '70vh', 
+            'margin': "auto", "display": "block"}, 
+            id="map"
+        ),
 ])
 
 if __name__ == '__main__':
