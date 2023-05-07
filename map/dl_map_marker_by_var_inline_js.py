@@ -4,8 +4,10 @@ from dash import Dash, html
 from dash_extensions.javascript import assign
 
 
-# assign map icons/markers by value of a variable
-# credit to Emil, the plotly pro: http://dash-leaflet.herokuapp.com/
+# Assign map icons/markers by value of a variable
+# Credit to Emil, the plotly pro: http://dash-leaflet.herokuapp.com/
+# When the app runs, this approach will automatically create a .js file in the assets folder (dashExtensions_default_inline_js.js)
+# Compare with the javascript variable approach (see dl_map_marker_by_var_js_vars.py)
 
 # A few countries.
 countries = [dict(name="Denmark", iso2="dk", lat=56.26392, lon=9.501785),
@@ -27,6 +29,7 @@ geojson = dlx.dicts_to_geojson([{**c, **dict(tooltip=c['name'])} for c in countr
 
 
 # Create javascript function that draws a marker with a custom icon, in this case a flag hosted by flagcdn.
+# Alternatively, the icons can be saved in the assets folder 
 draw_flag = assign("""function(feature, latlng){
 const flag = L.icon({iconUrl: `https://flagcdn.com/64x48/${feature.properties.iso2}.png`, iconSize: [64, 48]});
 return L.marker(latlng, {icon: flag});

@@ -1,6 +1,6 @@
-window.country = Object.assign({}, window.country, {
-    assign_marker: {
-        pointToLayer: function(feature, latlng) {
+window.dashExtensions = Object.assign({}, window.dashExtensions, {
+    default: {
+        function0: function(feature, latlng) {
             const flag = L.icon({
                 iconUrl: `https://flagcdn.com/64x48/${feature.properties.iso2}.png`,
                 iconSize: [64, 48]
@@ -11,4 +11,3 @@ window.country = Object.assign({}, window.country, {
         }
     }
 });
-
